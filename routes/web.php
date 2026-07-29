@@ -22,11 +22,12 @@ Route::name('students.')->prefix('students')->group(function() {
     //halaman daftar siswa
     Route::get('/', [StudentController::class, 'index'])->name('index');
 
+    //halaman tambah siswa
+    Route::get('/create', [StudentController::class, 'create'])->name('create');
+    
     //halaman detail siswa
     Route::get('/{id}', [StudentController::class, 'show'])->name('show');
 
-    //halaman tambah siswa
-    Route::get('/create', [StudentController::class, 'create'])->name('create');
 
     //halaman edit siswa
     Route::get('/{id}/edit', [StudentController::class, 'edit'])->name('edit');
