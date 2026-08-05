@@ -48,11 +48,11 @@ Route::name('teachers.')->prefix('teachers')->group(function() {
     //halaman daftar teacher
     Route::get('/', [TeacherController::class, 'index'])->name('index');
 
-    //halaman detail teacher
-    Route::get('/{id}', [TeacherController::class, 'show'])->name('show');
-
     //halaman tambah teacher
     Route::get('/create', [TeacherController::class, 'create'])->name('create');
+
+    //halaman detail teacher
+    Route::get('/{id}', [TeacherController::class, 'show'])->name('show');
 
     //halaman edit teacher
     Route::get('/{id}/edit', [TeacherController::class, 'edit'])->name('edit');
@@ -92,7 +92,7 @@ Route::name('schoolclasses.')->prefix('schoolclasses')->group(function() {
 });
 
 // manajemen pelajaran
-Route::resource('classes', MajorController::class);
+Route::resource('classes.', MajorController::class);
     
 
 
