@@ -68,15 +68,15 @@ Route::name('teachers.')->prefix('teachers')->group(function() {
 });
 
 // manajemen kelas
-Route::name('schoolclasses.')->prefix('schoolclasses')->group(function() {
+Route::name('classes.')->prefix('schoolclasses')->group(function() {
     //halaman daftar kelas
     Route::get('/', IndexController::class)->name('index');
 
-    //halaman detail kelas
-    Route::get('/{id}', ShowController::class)->name('show');
-
     //halaman tambah kelas
     Route::get('/create', CreateController::class)->name('create');
+
+    //halaman detail kelas
+    Route::get('/{id}', ShowController::class)->name('show');
 
     //halaman edit kelas
     Route::get('/{id}/edit', EditController::class)->name('edit');
@@ -92,7 +92,7 @@ Route::name('schoolclasses.')->prefix('schoolclasses')->group(function() {
 });
 
 // manajemen pelajaran
-Route::resource('classes.', MajorController::class);
+Route::resource('majors', MajorController::class);
     
 
 

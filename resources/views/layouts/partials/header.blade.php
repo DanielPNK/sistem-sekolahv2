@@ -10,7 +10,7 @@
                 <a href="{{ route('students.index') }}" class="text-white/55 hover:text-white">Siswa</a>
                 <a href="{{ route('teachers.index') }}" class="text-white/55 hover:text-white">Guru</a>
                 <a href="{{ route('schoolclasses.index') }}" class="text-white/55 hover:text-white">Kelas</a>
-                <a href="{{ route('classes.index') }}" class="text-white/55 hover:text-white">Jurusan</a>
+                <a href="{{ route('majors.index') }}" class="text-white/55 hover:text-white">Jurusan</a>
             </nav>
         </div>
         <div class="h-0.5 bg-[#A16207]"></div>
