@@ -55,7 +55,7 @@
                         </td>
                         <td class="px-5 py-4">
                             <div class="flex justify-end gap-4 text-xs font-medium">
-                                <a href="{{ route('teachers.show', ['id'=>1]) }}"
+                                <a href="{{ route('teachers.show', ['id' => $teacher['id']]) }}"
                                     class="text-[#16213A] hover:text-[#A16207]">Lihat</a>
                                 <a href="{{ route('teachers.edit', ['id' => 1]) }}" 
                                     class="text-[#16213A] hover:text-[#A16207]">Ubah</a>
