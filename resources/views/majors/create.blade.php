@@ -30,8 +30,8 @@
             <div>
                 <label for="description"
                     class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Deskripsi</label>
-                <input type="text" id="description" name="description" placeholder="Deskripsi jurusan"
-                    class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm placeholder:text-slate-400 focus:border-[#A16207] focus:bg-white focus:outline-none">
+                <textarea id="description" name="description" placeholder="Deskripsi jurusan"
+                    class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm placeholder:text-slate-400 focus:border-[#A16207] focus:bg-white focus:outline-none"></textarea>
             </div>
  
             <div class="flex justify-end gap-4 border-t border-[#EFEDE6] pt-6">
