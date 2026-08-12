@@ -39,15 +39,16 @@ class TeacherController extends Controller
 
     public function show(string $id)
     {
-        $title = "Menampilkan detail guru dengan ID: {$id}";
+        $title = "Sistem Sekolah - Detail Guru";
         return view('teachers.show', [
-            'title' => $title
+            'title' => $title,
+            'id' => $id
         ]);
     }
 
     public function create()
     {
-        $title = "Ini adalah halaman tambah guru";
+        $title = "Sistem Sekolah - Tambah Guru";
         return view('teachers.create', [
             'title' => $title
         ]);
@@ -55,7 +56,7 @@ class TeacherController extends Controller
 
     public function edit(string $id)
     {
-        $title = "Ini adalah halaman edit guru dengan ID: {$id}";
+        $title = "Sistem Sekolah - Edit Guru";
         return view('teachers.edit', [
             'title' => $title
         ]);

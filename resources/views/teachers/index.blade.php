@@ -51,15 +51,15 @@
                             {{ $teacher['phone'] }}
                         </td>
                         <td class="px-5 py-4">
-                            {{ $teacher['status'] }}
+                            <x-status :status="$teacher['status']" />
                         </td>
                         <td class="px-5 py-4">
                             <div class="flex justify-end gap-4 text-xs font-medium">
                                 <a href="{{ route('teachers.show', ['id' => $teacher['id']]) }}"
                                     class="text-[#16213A] hover:text-[#A16207]">Lihat</a>
-                                <a href="{{ route('teachers.edit', ['id' => 1]) }}" 
+                                <a href="{{ route('teachers.edit', ['id' => $teacher['id']]) }}" 
                                     class="text-[#16213A] hover:text-[#A16207]">Ubah</a>
-                                <form action="" method="POST"
+                                <form action="{{ route('teachers.destroy', ['id' => $teacher['id']]) }}" method="POST"
                                     onsubmit="return confirm('Hapus data guru ini dari buku induk?')">
 
                                     <button type="submit" class="text-red-700 hover:text-red-900">Hapus</button>
