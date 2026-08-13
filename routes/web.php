@@ -16,20 +16,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Manajemen siswa
+// student
 Route::name('students.')->prefix('students')->group(function() {
 
-    //halaman daftar siswa
+    //index student
     Route::get('/', [StudentController::class, 'index'])->name('index');
 
-    //halaman tambah siswa
+    //create student
     Route::get('/create', [StudentController::class, 'create'])->name('create');
     
-    //halaman detail siswa
+    //show student
     Route::get('/{id}', [StudentController::class, 'show'])->name('show');
 
 
-    //halaman edit siswa
+    //edit student
     Route::get('/{id}/edit', [StudentController::class, 'edit'])->name('edit');
 
     //logika tambah siswa
@@ -42,56 +42,56 @@ Route::name('students.')->prefix('students')->group(function() {
     Route::delete('/{id}', [StudentController::class, 'destroy'])->name('destroy');
 });
 
-// Manajemen teacher
+// teacher
 Route::name('teachers.')->prefix('teachers')->group(function() {
 
-    //halaman daftar teacher
+    //index teacher
     Route::get('/', [TeacherController::class, 'index'])->name('index');
 
-    //halaman tambah teacher
+    //create teacher
     Route::get('/create', [TeacherController::class, 'create'])->name('create');
 
-    //halaman detail teacher
+    //show teacher
     Route::get('/{id}', [TeacherController::class, 'show'])->name('show');
 
-    //halaman edit teacher
+    //edit teacher
     Route::get('/{id}/edit', [TeacherController::class, 'edit'])->name('edit');
 
-    //logika tambah teacher
+    
     Route::post('/', [TeacherController::class, 'store'])->name('store');
 
-    //logika edit teacher
+    
     Route::put('/{id}', [TeacherController::class, 'update'])->name('update');
 
-    //logika hapus teacher
+    
     Route::delete('/{id}', [TeacherController::class, 'destroy'])->name('destroy');
 });
 
-// manajemen kelas
+// school class
 Route::name('classes.')->prefix('schoolclasses')->group(function() {
-    //halaman daftar kelas
+    // index classes
     Route::get('/', IndexController::class)->name('index');
 
-    //halaman tambah kelas
+    // create classes
     Route::get('/create', CreateController::class)->name('create');
 
-    //halaman detail kelas
+    // show classes
     Route::get('/{id}', ShowController::class)->name('show');
 
-    //halaman edit kelas
+    // edit classes
     Route::get('/{id}/edit', EditController::class)->name('edit');
 
-    //logika tambah kelas
+
     Route::post('/', StoreController::class)->name('store');
 
-    //logika edit kelas
+   
     Route::put('/{id}', UpdateController::class)->name('update');
 
-    //logika hapus kelas
+
     Route::delete('/{id}', DestroyController::class)->name('destroy');
 });
 
-// manajemen pelajaran
+// majors
 Route::resource('majors', MajorController::class);
     
 
