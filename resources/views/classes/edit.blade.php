@@ -13,9 +13,9 @@
 
         <form action="" method="POST" class="space-y-6 border border-[#E5E3DB] bg-white p-8">
             <div>
-                <label for="code"
+                <label for="Nama Kelas"
                     class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Nama Kelas</label>
-                <input type="text" id="code" name="code" value="XII AKL 1"
+                <input type="text" id="name" name="name" value="XII AKL 1"
                     class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm focus:border-[#A16207] focus:bg-white focus:outline-none">
             </div>
 

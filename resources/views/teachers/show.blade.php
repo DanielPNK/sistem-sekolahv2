@@ -10,7 +10,7 @@
         <div class="mt-3 border border-[#E5E3DB] bg-white">
             <div class="flex items-start justify-between border-b border-[#E5E3DB] bg-[#FCFBF8] px-8 py-6">
                 <div>
-                    <p class="mb-1 text-[11px] uppercase tracking-[0.2em] text-[#A16207]">Lembar Siswa</p>
+                    <p class="mb-1 text-[11px] uppercase tracking-[0.2em] text-[#A16207]">Lembar Guru</p>
                     <h1 class="font-display text-3xl font-semibold text-[#16213A]">Budi Susanto</h1>
                     <p class="mt-1 font-mono text-xs text-slate-500">NIP 198501012024</p>
                 </div>
@@ -41,13 +41,13 @@
                 </div>
                 <div class="flex justify-between px-8 py-4">
                     <dt class="uppercase tracking-[0.1em] text-xs text-slate-400">Status</dt>
-                    <dd><x-status status="Aktif" /></dd>
+                    <dd><x-status-badge status="Aktif" /></dd>
                 </div>
             </dl>
 
             <div class="flex justify-end gap-4 border-t border-[#E5E3DB] px-8 py-5">
                 <a href="{{ route('teachers.index') }}" class="px-4 py-2.5 text-sm font-medium text-slate-500 hover:text-[#16213A]">Kembali</a>
-                <form action="{{ route('teachers.destroy', ['id' =>'id']) }}" method="POST" onsubmit="return confirm('Hapus data guru ini dari buku induk?')">
+                <form action="{{ route('teachers.destroy', ['id' => $id]) }}" method="POST" onsubmit="return confirm('Hapus data guru ini dari buku induk?')">
                     @csrf
                     @method('DELETE')
                     <button type="submit"
