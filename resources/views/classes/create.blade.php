@@ -32,25 +32,22 @@
             </div>
 
             <div>
-                <label for="major_id"
-                    class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Jurusan</label>
-                <select id="major_id" name="major_id"
+                <label for="major" class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Jurusan</label>
+                <select id="major" name="major_id"
                     class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm focus:border-[#A16207] focus:bg-white focus:outline-none">
-                    <option value="">Pilih jurusan</option>
-                    <option value="AKL">AKL</option>
-                    <option value="TKJ">TKJ</option>
-                    <option value="BiD">BD</option>
+                    @foreach ($majors as $major)
+                        <option value="{{ $major['id'] }}">{{ $major['code'] }} - {{ $major['name'] }}</option>
+                    @endforeach
                 </select>
             </div>
 
             <div>
-                <label for="teacher_id"
-                    class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Wali Kelas</label>
-                <select id="teacher_id" name="teacher_id"
+                <label for="teacher" class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Wali Kelas</label>
+                <select id="teacher" name="teacher_id"
                     class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm focus:border-[#A16207] focus:bg-white focus:outline-none">
-                    <option value="">Pilih wali kelas</option>
-                    <option value="1">Budi Santoso</option>
-                    <option value="2">Siti Nurhaliza</option>
+                    @foreach ($teachers as $teacher)
+                        <option value="{{ $teacher['id'] }}">{{ $teacher['name'] }}</option>
+                    @endforeach
                 </select>
             </div>
  
