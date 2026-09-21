@@ -36,7 +36,8 @@ class StudentController extends Controller
     {
         $title = "Sistem Sekolah - Detail Siswa";
         return view('students.show', [
-            'title' => $title
+            'title' => $title,
+            'id' => $id
         ]);
     }
 
