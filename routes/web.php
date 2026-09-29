@@ -25,15 +25,14 @@ Route::name('students.')->prefix('students')->group(function() {
     //create student
     Route::get('/create', [StudentController::class, 'create'])->name('create');
     
+    //logika tambah siswa
+    Route::post('/', [StudentController::class, 'store'])->name('store');
+
     //show student
     Route::get('/{id}', [StudentController::class, 'show'])->name('show');
 
-
     //edit student
     Route::get('/{id}/edit', [StudentController::class, 'edit'])->name('edit');
-
-    //logika tambah siswa
-    Route::post('/', [StudentController::class, 'store'])->name('store');
 
     //logika edit siswa
     Route::put('/{id}', [StudentController::class, 'update'])->name('update');
