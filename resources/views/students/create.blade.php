@@ -41,8 +41,8 @@
                 <select id="gender" name="gender"
                     class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm focus:border-[#A16207] focus:bg-white focus:outline-none">
                     <option value="">Pilih Gender</option>
-                    <option @@selected(true) value="Laki-laki">Laki-laki</option>
-                    <option value="Perempuan">Perempuan</option>
+                    <option @selected(old('gender') === 'Laki-laki') value="Laki-laki">Laki-laki</option>
+                    <option @selected(old('gender') === 'Perempuan') value="Perempuan">Perempuan</option>
                 </select>
                 @error('gender')
                     <span class="text-xs text-red-500 py-2">{{ $message }}</span>
@@ -55,9 +55,9 @@
                 <select id="major" name="major"
                     class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm focus:border-[#A16207] focus:bg-white focus:outline-none">
                     <option value="">Pilih jurusan</option>
-                    <option value="AKL">AKL</option>
-                    <option value="TKJ">TKJ</option>
-                    <option value="BiD">BiD</option>
+                    <option @selected(old('major') === 'AKL') value="AKL">AKL</option>
+                    <option @selected(old('major') === 'TKJ') value="TKJ">TKJ</option>
+                    <option @selected(old('major') === 'BiD') value="BiD">BiD</option>
                 </select>
                 @error('major')
                     <span class="text-xs text-red-500 py-2">{{ $message }}</span>
@@ -67,7 +67,7 @@
             <div>
                 <label for="class"
                     class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Kelas</label>
-                <input type="text" id="class" name="class" placeholder="Contoh: X AKL 1"
+                <input value="{{ old('class') }}" type="text" id="class" name="class" placeholder="Contoh: X AKL 1"
                     class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm placeholder:text-slate-400 focus:border-[#A16207] focus:bg-white focus:outline-none">
                 @error('class')
                     <span class="text-xs text-red-500 py-2">{{ $message }}</span>
